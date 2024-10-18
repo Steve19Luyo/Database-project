@@ -1,3 +1,9 @@
+Project Definition: School Feeding Program Database
+
+Our team has been tasked with developing a robust database system to manage and monitor school feeding programs, specifically focusing on tracking food distribution, student attendance, and the nutritional impact of meals provided to students. This project seeks to address the challenge of ensuring that students receive proper nutrition as part of their educational experience, contributing to better health and learning outcomes.
+
+This initiative aligns with *Sustainable Development Goal (SDG) 2: Zero Hunger*, which aims to end hunger, achieve food security, improve nutrition, and promote sustainable agriculture. In the Kenyan context, there is a significant gap in the implementation of structured and efficient catering systems within schools. While a few institutions, such as Merishaw School, have demonstrated some success in feedback and monitoring systems, the majority of Kenyan schools still lack an effective mechanism to ensure the quality and impact of the meals provided. Our database will aim to address this gap by providing a centralized, transparent, and scalable solution.
+
 Scope and Objectives
 
 The scope of this project involves the *design, development, and implementation* of a comprehensive and centralized database system that will manage key aspects of school feeding programs across Kenyan schools. The primary focus areas include:
