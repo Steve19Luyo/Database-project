@@ -1,13 +1,11 @@
--- Create School table
+
 CREATE TABLE School (
     SchoolID INT PRIMARY KEY,
     Name VARCHAR(100),
     Location VARCHAR(100),
     ContactInfo VARCHAR(50),
-    PrincipalName VARCHAR(50)
-);
+    PrincipalName VARCHAR(50);
 
--- Insert data into School table
 INSERT INTO School (SchoolID, Name, Location, ContactInfo, PrincipalName) VALUES
 (1, 'Greenfield Academy', 'Nairobi', '+254700123456', 'Jane Kimani'),
 (2, 'Lakeside High', 'Kisumu', '+254700789012', 'John Wafula'),
@@ -17,13 +15,13 @@ INSERT INTO School (SchoolID, Name, Location, ContactInfo, PrincipalName) VALUES
 
 SELECT * FROM School;
 
--- Create MealPlan table
+
 CREATE TABLE MealPlan (
     MealPlanID INT PRIMARY KEY,
     Description TEXT
 );
 
--- Insert data into MealPlan table
+
 INSERT INTO MealPlan (MealPlanID, Description) VALUES
 (1, 'Balanced diet with rice, beans'),
 (2, 'High-protein vegetarian meals'),
@@ -33,7 +31,7 @@ INSERT INTO MealPlan (MealPlanID, Description) VALUES
 
 SELECT * FROM MealPlan;
 
--- Create Distribution table
+
 CREATE TABLE Distribution (
     DistributionID INT PRIMARY KEY,
     Date DATE,
@@ -54,7 +52,7 @@ INSERT INTO Distribution (DistributionID, Date, Quantity, SchoolID, MealPlanID) 
 
 SELECT * FROM Distribution;
 
--- Join School and MealPlan through Distribution
+
 SELECT 
     School.Name AS SchoolName, 
     MealPlan.Description AS MealPlan 
@@ -71,7 +69,7 @@ FROM
 RIGHT JOIN School ON Distribution.SchoolID = School.SchoolID 
 RIGHT JOIN MealPlan ON Distribution.MealPlanID = MealPlan.MealPlanID;
 
--- Create Student table
+
 CREATE TABLE Student (
     StudentID INT PRIMARY KEY,
     Name VARCHAR(100),
