@@ -78,7 +78,7 @@ CREATE TABLE Student (
     Class VARCHAR(20)
 );
 
--- Insert data into Student table
+
 INSERT INTO Student (StudentID, Name, Gender, DateOfBirth, Class) VALUES
 (1, 'Alice Wanjiku', 'F', '2012-05-20', '6A'),
 (2, 'Brian Otieno', 'M', '2011-09-12', '7B'),
@@ -88,11 +88,11 @@ INSERT INTO Student (StudentID, Name, Gender, DateOfBirth, Class) VALUES
 
 SELECT * FROM Student;
 
--- Alter Student table to add Email column
+
 ALTER TABLE Student
 ADD Email VARCHAR(100);
 
--- Queries with filtering and updating
+
 SELECT Name, Class 
 FROM Student 
 WHERE Class IN ('6A', '7B');
@@ -132,7 +132,7 @@ JOIN
 WHERE 
     A.StudentID < B.StudentID;
 
--- Create FoodItem table
+
 CREATE TABLE FoodItem (
     FoodItemID INT PRIMARY KEY,
     FoodName VARCHAR(100),
@@ -140,7 +140,7 @@ CREATE TABLE FoodItem (
     Category VARCHAR(50)
 );
 
--- Insert data into FoodItem table
+
 INSERT INTO FoodItem (FoodItemID, FoodName, NutritionalValue, Category) VALUES
 (1, 'Rice', 'High in carbohydrates', 'Grains'),
 (2, 'Beans', 'High in protein', 'Legumes'),
@@ -150,7 +150,7 @@ INSERT INTO FoodItem (FoodItemID, FoodName, NutritionalValue, Category) VALUES
 
 SELECT * FROM FoodItem;
 
--- Create Consumption table
+
 CREATE TABLE Consumption (
     ConsumptionID INT PRIMARY KEY,
     StudentID INT,
@@ -160,7 +160,7 @@ CREATE TABLE Consumption (
     FOREIGN KEY (FoodItemID) REFERENCES FoodItem(FoodItemID)
 );
 
--- Insert data into Consumption table
+
 INSERT INTO Consumption (ConsumptionID, StudentID, FoodItemID, QuantityConsumed) VALUES
 (1, 1, 1, 2),
 (2, 2, 2, 1),
@@ -170,7 +170,7 @@ INSERT INTO Consumption (ConsumptionID, StudentID, FoodItemID, QuantityConsumed)
 
 SELECT * FROM Consumption;
 
--- Join Consumption with Student and FoodItem
+
 SELECT 
     S.Name AS StudentName, 
     F.FoodName AS ConsumedFood, 
@@ -180,7 +180,7 @@ FROM
 INNER JOIN Student S ON C.StudentID = S.StudentID
 INNER JOIN FoodItem F ON C.FoodItemID = F.FoodItemID;
 
--- Create Attendance table
+
 CREATE TABLE Attendance (
     AttendanceID INT PRIMARY KEY,
     Date DATE,
@@ -189,7 +189,6 @@ CREATE TABLE Attendance (
     FOREIGN KEY (StudentID) REFERENCES Student(StudentID)
 );
 
--- Insert data into Attendance table
 INSERT INTO Attendance (AttendanceID, Date, Status, StudentID) VALUES
 (1, '2024-11-01', 'Present', 1),
 (2, '2024-11-02', 'Absent', 2),
@@ -199,5 +198,4 @@ INSERT INTO Attendance (AttendanceID, Date, Status, StudentID) VALUES
 
 SELECT * FROM Attendance;
 
--- Drop Attendance table if it exists
 DROP TABLE IF EXISTS Attendance;
