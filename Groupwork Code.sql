@@ -39,7 +39,7 @@ CREATE TABLE Distribution (
     FOREIGN KEY (MealPlanID) REFERENCES MealPlan(MealPlanID)
 );
 
--- Insert data into Distribution table
+
 INSERT INTO Distribution (DistributionID, Date, Quantity, SchoolID, MealPlanID) VALUES
 (1, '2024-11-01', 100, 1, 1),
 (2, '2024-11-03', 80, 2, 2),
