@@ -19,7 +19,6 @@ CREATE TABLE MealPlan (
     Description TEXT
 );
 
-
 INSERT INTO MealPlan (MealPlanID, Description) VALUES
 (1, 'Balanced diet with rice, beans'),
 (2, 'High-protein vegetarian meals'),
