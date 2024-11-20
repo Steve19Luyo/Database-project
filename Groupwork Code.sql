@@ -28,6 +28,24 @@ INSERT INTO MealPlan (MealPlanID, Description) VALUES
 
 SELECT * FROM MealPlan;
 
+CREATE TABLE Distribution (
+    DistributionID INT PRIMARY KEY,
+    Date DATE,
+    Quantity INT,
+    SchoolID INT,
+    MealPlanID INT,
+    FOREIGN KEY (SchoolID) REFERENCES School(SchoolID),
+    FOREIGN KEY (MealPlanID) REFERENCES MealPlan(MealPlanID)
+);
+
+
+INSERT INTO Distribution (DistributionID, Date, Quantity, SchoolID, MealPlanID) VALUES
+(1, '2024-11-01', 100, 1, 1),
+(2, '2024-11-03', 80, 2, 2),
+(3, '2024-11-04', 120, 3, 3),
+(4, '2024-11-05', 75, 4, 4),
+(5, '2024-11-06', 90, 5, 5);
+
 
 
 SELECT * FROM Distribution;
