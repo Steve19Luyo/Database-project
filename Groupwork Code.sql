@@ -178,25 +178,3 @@ INNER JOIN Student S ON C.StudentID = S.StudentID
 INNER JOIN FoodItem F ON C.FoodItemID = F.FoodItemID;
 
 
-CREATE TABLE Attendance (
-    AttendanceID INT PRIMARY KEY,
-    Date DATE,
-    Status VARCHAR(10),
-    StudentID INT,
-    FOREIGN KEY (StudentID) REFERENCES Student(StudentID)
-);
-
-INSERT INTO Attendance (AttendanceID, Date, Status, StudentID) VALUES
-(1, '2024-11-01', 'Present', 1),
-(2, '2024-11-02', 'Absent', 2),
-(3, '2024-11-03', 'Present', 3),
-(4, '2024-11-04', 'Present', 4),
-(5, '2024-11-05', 'Absent', 5);
-
-SELECT * FROM Attendance;
-
-DROP TABLE IF EXISTS Attendance;
-
-
-
-
